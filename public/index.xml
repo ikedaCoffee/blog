@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Over 30 Engineer!</title>
+    <link>https://example.com/</link>
+    <description>Recent content on Over 30 Engineer!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 22 Aug 2019 05:07:48 +0900</lastBuildDate>
+    
+	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWSのIAMについて</title>
+      <link>https://example.com/posts/aws-iam/</link>
+      <pubDate>Thu, 22 Aug 2019 05:07:48 +0900</pubDate>
+      
+      <guid>https://example.com/posts/aws-iam/</guid>
+      <description>現在、AWSの資格を取ろうと思い、目下勉強中だ。今日はとりあえず、IAMについてまとめる。下記のUdemyのコースを受講しているのでこちらの</description>
+    </item>
+    
+    <item>
+      <title>自己紹介</title>
+      <link>https://example.com/profile/</link>
+      <pubDate>Thu, 22 Aug 2019 03:26:26 +0900</pubDate>
+      
+      <guid>https://example.com/profile/</guid>
+      <description>はじめまして、工兵といいます。 年齢は33歳です。5年間ほど翻訳会社で社内SEのようなことをやっていました。もっとプログラミングを勉強したいと</description>
+    </item>
+    
+  </channel>
+</rss>

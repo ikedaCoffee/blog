@@ -1,0 +1,58 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Over 30 Engineer!</title>
+		<link>https://example.com/posts/</link>
+		<description>Recent content in Posts on Over 30 Engineer!</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>ja-JP</language>
+		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+		<lastBuildDate>Thu, 22 Aug 2019 05:07:48 +0900</lastBuildDate>
+		<atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>AWSのIAMについて</title>
+			<link>https://example.com/posts/aws-iam/</link>
+			<pubDate>Thu, 22 Aug 2019 05:07:48 +0900</pubDate>
+			
+			<guid>https://example.com/posts/aws-iam/</guid>
+			<description>現在、AWSの資格を取ろうと思い、目下勉強中だ。今日はとりあえず、IAMについてまとめる。下記のUdemyのコースを受講しているのでこちらの</description>
+			<content type="html"><![CDATA[<p>現在、AWSの資格を取ろうと思い、目下勉強中だ。今日はとりあえず、IAMについてまとめる。下記のUdemyのコースを受講しているのでこちらの講義から引用などをさせていただく。</p>
+
+<p><a href="https://www.udemy.com/aws-and-infra/">AWS：ゼロから実践するAmazon Web Services。手を動かしながらインフラの基礎を習得</a></p>
+
+<p>AWSのサービスにIAMというのがある。</p>
+
+<p>IAMはAWS Identity and Access Managementの略。アイアムと読む人が多い。</p>
+
+<p><a href="https://aws.amazon.com/jp/iam/">https://aws.amazon.com/jp/iam/</a></p>
+
+<blockquote>
+<p>AWS のサービスやリソースへのアクセスを安全に管理できます。IAM を使用すると、AWS のユーザーとグループを作成および管理し、アクセス権を使用して AWS リソースへのアクセスを許可および拒否できます。</p>
+</blockquote>
+
+<p>覚えるべき用語があって、下記の4つ。</p>
+
+<ol>
+<li><code>ポリシー</code></li>
+<li><code>ユーザー</code></li>
+<li><code>グループ</code></li>
+<li><code>ロール</code></li>
+</ol>
+
+<p>それぞれ解説する↓。</p>
+
+<ol>
+<li><code>ポリシー</code>は、アクセス許可の定義。「どのAWSサービスの」「どのリソースに対して」「どんな操作を」「許可するor許可しない」を定義する。</li>
+<li><code>ユーザー</code>は、個々のアカウントのユーザー。</li>
+<li><code>グループ</code>は、IAMユーザーの集合。複数のユーザーにアクセス許可を付与する作業を簡素化する。</li>
+<li><code>ロール</code>は、一時的にアクセスを許可したアカウントを発行できる。EC2やLambdaなどのAWSリソースに権限を付与するために使用。</li>
+</ol>
+
+<p><code>ユーザー</code>や<code>グループ</code>はLinuxのそれと似ているのでわかりやすい。<code>ポリシー</code>もそれらを使用してユーザーへの権限管理を行うものなのだと理解できる。</p>
+
+<p><code>ロール</code>だけ少しわかりにくいかもしれない。ユーザーやポリシーを使用してアクセス許可などをすると永続的にアクセスを許可することになったりする。どうしてもセキュアとは言い切れない状態となってしまう。<code>ロール</code>という機能があることにより、一時的にのみ権限を付与することが可能になるため、永続的に権限を許可することに比べて、よりセキュアな状態であると言える。そういった状態を作るために<code>ロール</code>はあるみたいだ。</p>
+]]></content>
+		</item>
+		
+	</channel>
+</rss>
