@@ -32,10 +32,4 @@ https://github.com/ikedaCoffee/quasi-case-exam
 デプロイ先:  
 https://ikeda-quasi-case.herokuapp.com/
 
-- **画像抽出のためのスクリプト**
-
-MS Office (Word、Excel、PowerPoint) から画像を取り出すスクリプト
-
-https://github.com/ikedaCoffee/extract_images/blob/master/extract_images.rb
-
 ---
