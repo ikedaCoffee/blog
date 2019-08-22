@@ -1,7 +1,7 @@
 baseURL = "https://blog.over-30-engineer.xyz/"
 languageCode = "ja-JP"
 defaultContentLanguage = "ja"
-title = "Engineer over 30"
+title = "いけだのブログ"
 theme = "hermit"
 # enableGitInfo = true
 pygmentsCodefences  = true
