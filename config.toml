@@ -37,7 +37,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   themeColor = "#494f5c"
 
   homeSubtitle = "30代エンジニアの技術ブログ"
-  footerCopyright = ' engineer_over_30_club'
+  footerCopyright = ' 30s_engineer_club'
   # bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
