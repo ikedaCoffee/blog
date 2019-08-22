@@ -6,7 +6,7 @@ images:
   - https://picsum.photos/1024/768/?random
 ---
 
-はじめまして、工兵といいます。
+はじめまして、こうへいといいます。
 
 <img src="https://avatars0.githubusercontent.com/u/25954028?s=460&v=4" width=250px>
 

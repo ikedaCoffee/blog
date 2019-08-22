@@ -14,7 +14,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 # disqusShortname = "yourdiscussshortname"
 
 [author]
-  name = "工兵"
+  name = "Kohei"
 
 [blackfriday]
   # hrefTargetBlank = true
@@ -29,7 +29,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   dateform        = "2006年01月02日"
   dateformShort   = "01月02日"
   dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 +0900"
+  dateformNumTime = "2006-01-02 15:04"
 
   # Metadata mostly used in document's head
   # description = ""
