@@ -1,7 +1,7 @@
 baseURL = "https://blog.over-30-engineer.xyz/"
 languageCode = "ja-JP"
 defaultContentLanguage = "ja"
-title = "Over 30 Engineer!"
+title = "Engineer over 30"
 theme = "hermit"
 # enableGitInfo = true
 pygmentsCodefences  = true
@@ -37,7 +37,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   themeColor = "#494f5c"
 
   homeSubtitle = "30代エンジニアの技術ブログ"
-  footerCopyright = ' over_30_engineer!'
+  footerCopyright = ' engineer_over_30'
   # bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
