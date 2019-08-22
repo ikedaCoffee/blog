@@ -63,10 +63,6 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     name = "github"
     url = "https://github.com/ikedaCoffee/"
 
-  [[params.social]]
-      name = "email"
-      url = "mailto:kouhik06@gmail.com"
-
 [menu]
 
   [[menu.main]]
