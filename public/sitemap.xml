@@ -3,42 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/tags/aws/</loc>
+    <loc>https://blog.over-30-engineer.xyz/</loc>
     <lastmod>2019-08-22T05:07:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/posts/aws-iam/</loc>
+    <loc>https://blog.over-30-engineer.xyz/tags/aws/</loc>
     <lastmod>2019-08-22T05:07:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://blog.over-30-engineer.xyz/posts/aws-iam/</loc>
     <lastmod>2019-08-22T05:07:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/posts/</loc>
+    <loc>https://blog.over-30-engineer.xyz/posts/</loc>
     <lastmod>2019-08-22T05:07:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://blog.over-30-engineer.xyz/tags/</loc>
     <lastmod>2019-08-22T05:07:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/demo/</loc>
-    <lastmod>2019-08-22T03:26:26+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/image/</loc>
-    <lastmod>2019-08-22T03:26:26+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/profile/</loc>
+    <loc>https://blog.over-30-engineer.xyz/profile/</loc>
     <lastmod>2019-08-22T03:26:26+09:00</lastmod>
   </url>
   
