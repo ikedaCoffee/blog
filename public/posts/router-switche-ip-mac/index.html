@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="ルーターとスイッチとIPアドレスとMACアドレスについて">
+<meta itemprop="description" content="ネットワークの知識がなさすぎて友達に相談したところ、色々なことを教えてくれた。 メモのような感じなので、他の人が読んだところで理解はできないか">
+
+
+<meta itemprop="datePublished" content="2019-09-27T01:18:52&#43;09:00" />
+<meta itemprop="dateModified" content="2019-09-27T01:18:52&#43;09:00" />
+<meta itemprop="wordCount" content="1256">
+
+  <meta itemprop="image" content="https://picsum.photos/1024/768/?random">
+
+
+
+<meta itemprop="keywords" content="network," />
+<meta property="og:title" content="ルーターとスイッチとIPアドレスとMACアドレスについて" />
+<meta property="og:description" content="ネットワークの知識がなさすぎて友達に相談したところ、色々なことを教えてくれた。 メモのような感じなので、他の人が読んだところで理解はできないか" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.over-30-engineer.xyz/posts/router-switche-ip-mac/" />
+
+<meta property="og:image" content="https://picsum.photos/1024/768/?random" />
+<meta property="article:published_time" content="2019-09-27T01:18:52+09:00" />
+<meta property="article:modified_time" content="2019-09-27T01:18:52+09:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://picsum.photos/1024/768/?random"/>
+
+<meta name="twitter:title" content="ルーターとスイッチとIPアドレスとMACアドレスについて"/>
+<meta name="twitter:description" content="ネットワークの知識がなさすぎて友達に相談したところ、色々なことを教えてくれた。 メモのような感じなので、他の人が読んだところで理解はできないか"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>ルーターとスイッチとIPアドレスとMACアドレスについて</title>
+	<link rel="stylesheet" href="https://blog.over-30-engineer.xyz/css/style.min.df961f69d5dab7b7b6eb4af35c991c552306e8a9ff4bed0e66e63fdca2ded19a.css" integrity="sha256-35YfadXat7e260rzXJkcVSMG6Kn/S+0OZuY/3KLe0Zo=" crossorigin="anonymous">
+	<style>.bg-img {background-image: url('https://picsum.photos/1024/768/?random');}</style>
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://blog.over-30-engineer.xyz/">30s_engineer</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://blog.over-30-engineer.xyz/posts/">Blogs</a>
+				<a href="https://blog.over-30-engineer.xyz/profile/">Profile</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="img-btn" class="hdr-btn" title="Featured Image"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></button><span class="hdr-social hide-in-mobile"><a href="https://twitter.com/dak0dak0/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://github.com/ikedaCoffee/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://blog.over-30-engineer.xyz/posts/">Blogs</a></li>
+			<li><a href="https://blog.over-30-engineer.xyz/profile/">Profile</a></li>
+		</ul>
+	</div>
+
+
+	<div class="bg-img"></div>
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>2019年09月27日</span></div>
+				<h1>ルーターとスイッチとIPアドレスとMACアドレスについて</h1>
+			</header>
+			<div class="content">
+				
+
+<p>ネットワークの知識がなさすぎて友達に相談したところ、色々なことを教えてくれた。</p>
+
+<p>メモのような感じなので、他の人が読んだところで理解はできないかもしれない。</p>
+
+<p>まじで感謝。教わったことを自分なりにまとめてみた。内容には間違いがあるかもしれないので、もし間違いを見つけたら教えていただきたい。</p>
+
+<h2 id="osi参照モデル-通信の層">OSI参照モデル (通信の層)<a href="#osi参照モデル-通信の層" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<table>
+<thead>
+<tr>
+<th>OSI参照モデル</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>7.  <a href="https://ja.wikipedia.org/wiki/アプリケーション層">アプリケーション層</a><br /></td>
+</tr>
+
+<tr>
+<td>6.  <a href="https://ja.wikipedia.org/wiki/プレゼンテーション層">プレゼンテーション層</a><br /></td>
+</tr>
+
+<tr>
+<td>5.  <a href="https://ja.wikipedia.org/wiki/セッション層">セッション層</a><br /></td>
+</tr>
+
+<tr>
+<td>4.  <a href="https://ja.wikipedia.org/wiki/トランスポート層">トランスポート層</a><br />セグメント(パケットのようなもの)</td>
+</tr>
+
+<tr>
+<td>3.  <a href="https://ja.wikipedia.org/wiki/ネットワーク層">ネットワーク層</a><br />パケット<br />IPアドレス<br />ルーター(IPアドレスが理解できる)</td>
+</tr>
+
+<tr>
+<td>2.  <a href="https://ja.wikipedia.org/wiki/データリンク層">データリンク層</a><br />フレーム(パケットのようなもの)<br />ブロードキャスト(同じネットワーク範囲内で行われる)<br />スイッチ(MACアドレスしか理解できない)<br />MACアドレス(NIC)<br />ARPテーブル = 送信先IPアドレスと送信先MACアドレス両方の情報</td>
+</tr>
+
+<tr>
+<td>1.  <a href="https://ja.wikipedia.org/wiki/物理層">物理層</a><br />ケーブル<br />ハブ</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="macアドレスとipアドレスの違い">MACアドレスとIPアドレスの違い<a href="#macアドレスとipアドレスの違い" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>なぜIPアドレスが必要か？</p>
+
+<p>スイッチの場合、ネットワーク部が違うと通信できない</p>
+
+<ol>
+<li>PCとPCの間にスイッチをおく</li>
+<li>ハブに6台くらいのPC繋いでるとする。リクエストはハブを経由して6台に全部送られる(ブローキャスト)</li>
+<li>複数のPCがリクエストを送るとリクエスト同士がコリジョンが起こる(コリジョン・ドメイン)</li>
+<li>ハブの代わりにスイッチを使う</li>
+<li>スイッチを経由して、ARPリクエストをブロードキャストする(全部の繋がってるPCにARPリクエストが飛ぶ、ブロードキャスト・ドメイン)。</li>
+<li>ARPリプライは指定したIPのMACアドレスのみから送られてくる</li>
+<li>MACアドレスがわかったのでNICが識別される</li>
+</ol>
+
+<h2 id="ルーターについて">ルーターについて<a href="#ルーターについて" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<ol>
+<li>スイッチを外して、ルーターのみで通信するとする(例えば6台)</li>
+<li>ネットワーク部が違くても通信できる</li>
+<li>例えば、192.168.1.1/24と192.168.2.<sup>1</sup>&frasl;<sub>24</sub>(ネットワーク違う)</li>
+<li>192.168.1.1/24のブロードキャスト・ドメインは192.168.1.255</li>
+<li>違うネットワーク同士をつなぐのがルーター</li>
+<li>コリジョン・ドメインを分けることができる</li>
+</ol>
+
+<h2 id="ルーターが原因でpingが飛ばない場合">ルーターが原因でPingが飛ばない場合<a href="#ルーターが原因でpingが飛ばない場合" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<ol>
+<li>TTLは生存時間(経由したルーターの数のようなもの)</li>
+<li>途中でルーターが不具合を起こした場合にPingが帰ってこない</li>
+<li>経由しているルーターの道筋をトレースルート(WIndowsだとトレーサートというらしい)</li>
+<li>ルーティングはルーターがどのルートを通っていくか</li>
+</ol>
+
+<h2 id="スイッチング">スイッチング<a href="#スイッチング" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<ol>
+<li>スイッチングはどのようにスイッチするか</li>
+</ol>
+
+<h2 id="l2スイッチとl3スイッチ">L2スイッチとL3スイッチ<a href="#l2スイッチとl3スイッチ" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<ol>
+<li>L2スイッチはレイヤー2で動く機器(MACアドレスのみを理解する)</li>
+<li>L3スイッチはレイヤー3で動く機器(MACアドレスもIPアドレスも理解する)</li>
+</ol>
+
+<h2 id="vlan">VLAN<a href="#vlan" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>VLANを使えば、ブロードキャストドメインを分けることができる</p>
+
+<h2 id="dhcp-dynamic-host-configuration-protocol">DHCP(Dynamic Host Configuration Protocol)<a href="#dhcp-dynamic-host-configuration-protocol" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>IPアドレスを自動で割り振る。設定をONとOFFにすることができる</p>
+
+<h2 id="ネットワークを勉強するに当たって参照サイト">ネットワークを勉強するに当たって参照サイト<a href="#ネットワークを勉強するに当たって参照サイト" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p><a href="http://www5e.biglobe.ne.jp/aji/3min/">http://www5e.biglobe.ne.jp/aji/3min/</a></p>
+
+<p>特に24回目は参考になると紹介されたが、0回〜81回まで全部読んどけと友達に紹介してもらった。</p>
+
+			</div>
+
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://blog.over-30-engineer.xyz/tags/network">network</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1256 文字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-09-27 01:18</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="https://blog.over-30-engineer.xyz/posts/aws-iam/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;前へ</span><br><span>AWSのIAMについて</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2019 <a href="https://blog.over-30-engineer.xyz/">ikeda</a> 30s_engineer <a href="https://blog.over-30-engineer.xyz/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></p>
+	</footer>
+
+
+
+	<script src="https://blog.over-30-engineer.xyz/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

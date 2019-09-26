@@ -1,13 +1,133 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Posts on 30s engineer club</title>
+		<title>Posts on 30s_engineer</title>
 		<link>https://blog.over-30-engineer.xyz/posts/</link>
-		<description>Recent content in Posts on 30s engineer club</description>
+		<description>Recent content in Posts on 30s_engineer</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>ja-JP</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Thu, 22 Aug 2019 05:07:48 +0900</lastBuildDate>
+		<lastBuildDate>Fri, 27 Sep 2019 01:18:52 +0900</lastBuildDate>
 		<atom:link href="https://blog.over-30-engineer.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>ルーターとスイッチとIPアドレスとMACアドレスについて</title>
+			<link>https://blog.over-30-engineer.xyz/posts/router-switche-ip-mac/</link>
+			<pubDate>Fri, 27 Sep 2019 01:18:52 +0900</pubDate>
+			
+			<guid>https://blog.over-30-engineer.xyz/posts/router-switche-ip-mac/</guid>
+			<description>ネットワークの知識がなさすぎて友達に相談したところ、色々なことを教えてくれた。 メモのような感じなので、他の人が読んだところで理解はできないか</description>
+			<content type="html"><![CDATA[
+
+<p>ネットワークの知識がなさすぎて友達に相談したところ、色々なことを教えてくれた。</p>
+
+<p>メモのような感じなので、他の人が読んだところで理解はできないかもしれない。</p>
+
+<p>まじで感謝。教わったことを自分なりにまとめてみた。内容には間違いがあるかもしれないので、もし間違いを見つけたら教えていただきたい。</p>
+
+<h2 id="osi参照モデル-通信の層">OSI参照モデル (通信の層)</h2>
+
+<table>
+<thead>
+<tr>
+<th>OSI参照モデル</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>7.  <a href="https://ja.wikipedia.org/wiki/アプリケーション層">アプリケーション層</a><br /></td>
+</tr>
+
+<tr>
+<td>6.  <a href="https://ja.wikipedia.org/wiki/プレゼンテーション層">プレゼンテーション層</a><br /></td>
+</tr>
+
+<tr>
+<td>5.  <a href="https://ja.wikipedia.org/wiki/セッション層">セッション層</a><br /></td>
+</tr>
+
+<tr>
+<td>4.  <a href="https://ja.wikipedia.org/wiki/トランスポート層">トランスポート層</a><br />セグメント(パケットのようなもの)</td>
+</tr>
+
+<tr>
+<td>3.  <a href="https://ja.wikipedia.org/wiki/ネットワーク層">ネットワーク層</a><br />パケット<br />IPアドレス<br />ルーター(IPアドレスが理解できる)</td>
+</tr>
+
+<tr>
+<td>2.  <a href="https://ja.wikipedia.org/wiki/データリンク層">データリンク層</a><br />フレーム(パケットのようなもの)<br />ブロードキャスト(同じネットワーク範囲内で行われる)<br />スイッチ(MACアドレスしか理解できない)<br />MACアドレス(NIC)<br />ARPテーブル = 送信先IPアドレスと送信先MACアドレス両方の情報</td>
+</tr>
+
+<tr>
+<td>1.  <a href="https://ja.wikipedia.org/wiki/物理層">物理層</a><br />ケーブル<br />ハブ</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="macアドレスとipアドレスの違い">MACアドレスとIPアドレスの違い</h2>
+
+<p>なぜIPアドレスが必要か？</p>
+
+<p>スイッチの場合、ネットワーク部が違うと通信できない</p>
+
+<ol>
+<li>PCとPCの間にスイッチをおく</li>
+<li>ハブに6台くらいのPC繋いでるとする。リクエストはハブを経由して6台に全部送られる(ブローキャスト)</li>
+<li>複数のPCがリクエストを送るとリクエスト同士がコリジョンが起こる(コリジョン・ドメイン)</li>
+<li>ハブの代わりにスイッチを使う</li>
+<li>スイッチを経由して、ARPリクエストをブロードキャストする(全部の繋がってるPCにARPリクエストが飛ぶ、ブロードキャスト・ドメイン)。</li>
+<li>ARPリプライは指定したIPのMACアドレスのみから送られてくる</li>
+<li>MACアドレスがわかったのでNICが識別される</li>
+</ol>
+
+<h2 id="ルーターについて">ルーターについて</h2>
+
+<ol>
+<li>スイッチを外して、ルーターのみで通信するとする(例えば6台)</li>
+<li>ネットワーク部が違くても通信できる</li>
+<li>例えば、192.168.1.1/24と192.168.2.<sup>1</sup>&frasl;<sub>24</sub>(ネットワーク違う)</li>
+<li>192.168.1.1/24のブロードキャスト・ドメインは192.168.1.255</li>
+<li>違うネットワーク同士をつなぐのがルーター</li>
+<li>コリジョン・ドメインを分けることができる</li>
+</ol>
+
+<h2 id="ルーターが原因でpingが飛ばない場合">ルーターが原因でPingが飛ばない場合</h2>
+
+<ol>
+<li>TTLは生存時間(経由したルーターの数のようなもの)</li>
+<li>途中でルーターが不具合を起こした場合にPingが帰ってこない</li>
+<li>経由しているルーターの道筋をトレースルート(WIndowsだとトレーサートというらしい)</li>
+<li>ルーティングはルーターがどのルートを通っていくか</li>
+</ol>
+
+<h2 id="スイッチング">スイッチング</h2>
+
+<ol>
+<li>スイッチングはどのようにスイッチするか</li>
+</ol>
+
+<h2 id="l2スイッチとl3スイッチ">L2スイッチとL3スイッチ</h2>
+
+<ol>
+<li>L2スイッチはレイヤー2で動く機器(MACアドレスのみを理解する)</li>
+<li>L3スイッチはレイヤー3で動く機器(MACアドレスもIPアドレスも理解する)</li>
+</ol>
+
+<h2 id="vlan">VLAN</h2>
+
+<p>VLANを使えば、ブロードキャストドメインを分けることができる</p>
+
+<h2 id="dhcp-dynamic-host-configuration-protocol">DHCP(Dynamic Host Configuration Protocol)</h2>
+
+<p>IPアドレスを自動で割り振る。設定をONとOFFにすることができる</p>
+
+<h2 id="ネットワークを勉強するに当たって参照サイト">ネットワークを勉強するに当たって参照サイト</h2>
+
+<p><a href="http://www5e.biglobe.ne.jp/aji/3min/">http://www5e.biglobe.ne.jp/aji/3min/</a></p>
+
+<p>特に24回目は参考になると紹介されたが、0回〜81回まで全部読んどけと友達に紹介してもらった。</p>
+]]></content>
+		</item>
 		
 		<item>
 			<title>AWSのIAMについて</title>
