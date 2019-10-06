@@ -26,10 +26,8 @@ images:
 
 TrelloのようなToDoアプリを作成しました。
 
-GitHub:
-https://github.com/ikedaCoffee/quasi-case-exam
+GitHub: https://github.com/ikedaCoffee/quasi-case-exam
 
-デプロイ先:
-https://ikeda-quasi-case.herokuapp.com/
+デプロイ先: https://ikeda-quasi-case.herokuapp.com
 
 ---
