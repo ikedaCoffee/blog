@@ -8,12 +8,27 @@
   </url>
   
   <url>
+    <loc>https://blog.over-30-engineer.xyz/tags/circleci/</loc>
+    <lastmod>2019-11-02T15:09:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.over-30-engineer.xyz/tags/docker/</loc>
+    <lastmod>2019-11-02T15:09:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.over-30-engineer.xyz/tags/minitest/</loc>
+    <lastmod>2019-11-02T15:09:12+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.over-30-engineer.xyz/posts/</loc>
     <lastmod>2019-11-02T15:09:12+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.over-30-engineer.xyz/tags/rails-minitest-docker-circleci-wsl/</loc>
+    <loc>https://blog.over-30-engineer.xyz/tags/rails/</loc>
     <lastmod>2019-11-02T15:09:12+09:00</lastmod>
   </url>
   
@@ -24,6 +39,11 @@
   
   <url>
     <loc>https://blog.over-30-engineer.xyz/tags/</loc>
+    <lastmod>2019-11-02T15:09:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.over-30-engineer.xyz/tags/wsl/</loc>
     <lastmod>2019-11-02T15:09:12+09:00</lastmod>
   </url>
   

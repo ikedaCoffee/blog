@@ -105,8 +105,7 @@
 <li><code>circleci/ruby</code>と検索する。もしくは、直接<a href="https://hub.docker.com/r/circleci/ruby">こちら</a>にアクセスする。</li>
 <li><code>Tags</code>を選択</li>
 <li>Tagsの検索部分で、<code>2.5.7-node-browsers</code>と検索する。<code>2.5.7</code>は自分が使用しているRubyのバージョン。<code>node</code>はNode .jsを含める場合。Rails使う場合はこれを含めておいた方が無難そう。そして大事なのが<code>browsers</code>の部分。これだけでChromeやFirefoxのブラウザ環境が入った環境を構築できる。</li>
-<li>今回、自分の使用するイメージは<code>circleci/ruby:2.5.7-node-browsers</code>ということになる。
-<br /></li>
+<li>今回、自分の使用するイメージは<code>circleci/ruby:2.5.7-node-browsers</code>ということになる。</li>
 </ol></li>
 
 <li><p>Dockerfileおよびdocker-compose.ymlの作成</p></li>
