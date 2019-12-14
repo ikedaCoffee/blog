@@ -14,10 +14,10 @@
     
     <item>
       <title>RailsのシステムテストをCircleCIで自動で実行する</title>
-      <link>https://blog.over-30-engineer.xyz/posts/docker-basics/</link>
+      <link>https://blog.over-30-engineer.xyz/posts/rails-system-test/</link>
       <pubDate>Sat, 14 Dec 2019 15:09:12 +0900</pubDate>
       
-      <guid>https://blog.over-30-engineer.xyz/posts/docker-basics/</guid>
+      <guid>https://blog.over-30-engineer.xyz/posts/rails-system-test/</guid>
       <description>Windows10でRailsのシステムテストの環境構築 最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、</description>
     </item>
     
