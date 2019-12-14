@@ -6,7 +6,7 @@ images:
   - https://picsum.photos/1024/768/?random
 ---
 
-<img src="https://avatars0.githubusercontent.com/u/25954028?s=460&v=4" width=250px>
+<img src="https://pbs.twimg.com/profile_images/1205813313197633540/WVrMv26F.jpg" width=250px>
 
 5年間ほど翻訳会社で社内SEのようなことをやっていました。肩書きだけはエンジニアだったものの、ITエンジニアらしいことはあまりしていませんでした。ただ、たまにはコードを書くこともありました。それが面白くって、もっとプログラミングを勉強したいと思い、スクールに通い、Ruby/Railsを学びました。思い切って転職をして、今は一応ITエンジニアとして働いています(肩書きだけではなく実務としても)。
 
