@@ -10,15 +10,13 @@
 		<atom:link href="https://blog.over-30-engineer.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
-			<title>RailsのシステムテストをCircleCIで自動で実行する</title>
-			<link>https://blog.over-30-engineer.xyz/posts/rails-system-test/</link>
+			<title>Windows10でRailsのシステムテストの環境構築</title>
+			<link>https://blog.over-30-engineer.xyz/posts/rails-systemtest-win10/</link>
 			<pubDate>Sat, 14 Dec 2019 15:09:12 +0900</pubDate>
 			
-			<guid>https://blog.over-30-engineer.xyz/posts/rails-system-test/</guid>
-			<description>Windows10でRailsのシステムテストの環境構築 最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、</description>
+			<guid>https://blog.over-30-engineer.xyz/posts/rails-systemtest-win10/</guid>
+			<description>最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、テストフレームワークはデフォルトのMinitestを使用</description>
 			<content type="html"><![CDATA[
-
-<h2 id="windows10でrailsのシステムテストの環境構築">Windows10でRailsのシステムテストの環境構築</h2>
 
 <p>最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、テストフレームワークはデフォルトのMinitestを使用している。前の職場ではテストコードを書く文化がなく、テストコードを記述させてもらえてありがたく思っている。</p>
 

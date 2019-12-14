@@ -1,5 +1,5 @@
 ---
-title: "RailsのシステムテストをCircleCIで自動で実行する"
+title: "Windows10でRailsのシステムテストの環境構築"
 date: 2019-12-14T15:09:12+09:00
 draft: false
 toc: false
@@ -12,8 +12,6 @@ tags:
   - CircleCI
   - WSL
 ---
-
-## Windows10でRailsのシステムテストの環境構築
 
 最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、テストフレームワークはデフォルトのMinitestを使用している。前の職場ではテストコードを書く文化がなく、テストコードを記述させてもらえてありがたく思っている。
 
