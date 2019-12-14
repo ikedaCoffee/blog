@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 27 Sep 2019 01:18:52 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 15:09:12 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.over-30-engineer.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rails Minitest Docker CircleCI WSL</title>
+      <link>https://blog.over-30-engineer.xyz/tags/rails-minitest-docker-circleci-wsl/</link>
+      <pubDate>Sat, 02 Nov 2019 15:09:12 +0900</pubDate>
+      
+      <guid>https://blog.over-30-engineer.xyz/tags/rails-minitest-docker-circleci-wsl/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>network</title>
