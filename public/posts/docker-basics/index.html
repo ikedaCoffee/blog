@@ -211,20 +211,20 @@
 
 <ol>
 <li><p>railsのルートディレクトリ直下で下記を実行</p>
-<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">&gt;</span> <span class="n">docker-compose</span> <span class="n">build</span>
-<span class="p">&gt;</span> <span class="n">docker-compose</span> <span class="n">up</span> <span class="n">-d</span>
-<span class="p">&gt;</span> <span class="n">docker-compose</span> <span class="n">exec</span> <span class="n">app</span> <span class="n">rails</span> <span class="n">db</span><span class="err">:</span><span class="n">create</span> <span class="n">db</span><span class="err">:</span><span class="n">migrate</span></code></pre></div></li>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">&gt; docker-compose build
+&gt; docker-compose up -d
+&gt; docker-compose <span class="nb">exec</span> app rails db:create db:migrate</code></pre></div></li>
 
 <li><p>対象のコンテナにアタッチしてシステムテストを試してみる</p></li>
 </ol>
 
 <p><code>docker ps</code>コマンドで、起動中のコンテナを確認すると、下記のような状態になっているはず。</p>
-<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell">   <span class="p">&gt;</span> <span class="n">docker</span> <span class="n">ps</span>
-   <span class="p">...</span> <span class="n">NAMES</span>
-   <span class="p">...</span> <span class="n">railsアプリ名_web_1</span>
-   <span class="p">...</span> <span class="n">railsアプリ名_db_1</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">   &gt; docker ps
+   ... NAMES
+   ... railsアプリ名_web_1
+   ... railsアプリ名_db_1</code></pre></div>
 <p>下記を実行してコンテン内に入る。</p>
-<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell">   <span class="p">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">railsアプリ名_web_1</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">sh</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">   &gt; docker <span class="nb">exec</span> -it railsアプリ名_web_1 /bin/sh</code></pre></div>
 <p>Railsアプリのルーディレクトリに移動して、システムテストを試す。</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">   $ rails test:system</code></pre></div>
 <p>テストが実行されればOK。</p>
