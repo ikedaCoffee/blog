@@ -6,7 +6,11 @@ toc: false
 images:
   - https://picsum.photos/1024/768/?random
 tags:
-  - Rails Minitest Docker CircleCI WSL
+  - Rails
+  - Minitest
+  - Docker
+  - CircleCI
+  - WSL
 ---
 
 ## Windows10でRailsのシステムテストの環境構築
@@ -89,7 +93,7 @@ WSLを使用し続けるのであれば、Windowsにインストールされて�
    3. `Tags`を選択
    4. Tagsの検索部分で、`2.5.7-node-browsers`と検索する。`2.5.7`は自分が使用しているRubyのバージョン。`node`はNode .jsを含める場合。Rails使う場合はこれを含めておいた方が無難そう。そして大事なのが`browsers`の部分。これだけでChromeやFirefoxのブラウザ環境が入った環境を構築できる。
    5. 今回、自分の使用するイメージは`circleci/ruby:2.5.7-node-browsers`ということになる。
-   
+
 3. Dockerfileおよびdocker-compose.ymlの作成
 
    自分の場合、すでに作成済のrailsアプリを動かすために、railsアプリ配下に下記のような構成でDockerfileとdocker-compose.ymlを作成した。どちらもrailsのルートディレクトリ直下に置いた。
