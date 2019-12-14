@@ -68,7 +68,7 @@
 <p>Gemfileを開いて、<code>gem 'capybara', '~&gt; 2.13'</code>などと記述されている箇所を<code>gem 'capybara', '~&gt; 3.17'</code>に変更する。</p>
 <div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1"># ↓を</span>
 <span class="n">gem</span> <span class="s1">&#39;capybara&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.13&#39;</span>
-<span class="c1"># ↓をに変更</span>
+<span class="c1"># ↓に変更</span>
 <span class="n">gem</span> <span class="s1">&#39;capybara&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.17&#39;</span></code></pre></div>
 <p>変更したら、忘れずに<code>bundle install</code>をすること。</p></li>
 </ol>
