@@ -63,8 +63,8 @@ WSLを使用し続けるのであれば、Windowsにインストールされて�
     Gemfileを開いて、`gem 'capybara', '~> 2.13'`などと記述されている箇所を`gem 'capybara', '~> 3.17'`に変更する。
 
     ```ruby
-    - gem 'capybara', '~> 2.13'
-    + gem 'capybara', '~> 3.17'
+     - gem 'capybara', '~> 2.13'
+     + gem 'capybara', '~> 3.17'
     ```
 
     変更したら、忘れずに`bundle install`をすること。
