@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 02 Nov 2019 15:09:12 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 15:09:12 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.over-30-engineer.xyz/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>RailsのシステムテストをCircleCIで自動で実行する</title>
       <link>https://blog.over-30-engineer.xyz/posts/docker-basics/</link>
-      <pubDate>Sat, 02 Nov 2019 15:09:12 +0900</pubDate>
+      <pubDate>Sat, 14 Dec 2019 15:09:12 +0900</pubDate>
       
       <guid>https://blog.over-30-engineer.xyz/posts/docker-basics/</guid>
       <description>Windows10でRailsのシステムテストの環境構築 最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、</description>
