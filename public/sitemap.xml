@@ -4,7 +4,27 @@
   
   <url>
     <loc>https://blog.over-30-engineer.xyz/</loc>
-    <lastmod>2019-12-14T15:09:12+09:00</lastmod>
+    <lastmod>2019-12-17T15:06:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.over-30-engineer.xyz/tags/jquery/</loc>
+    <lastmod>2019-12-17T15:06:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.over-30-engineer.xyz/posts/jquery/</loc>
+    <lastmod>2019-12-17T15:06:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.over-30-engineer.xyz/posts/</loc>
+    <lastmod>2019-12-17T15:06:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.over-30-engineer.xyz/tags/</loc>
+    <lastmod>2019-12-17T15:06:05+09:00</lastmod>
   </url>
   
   <url>
@@ -23,17 +43,7 @@
   </url>
   
   <url>
-    <loc>https://blog.over-30-engineer.xyz/posts/</loc>
-    <lastmod>2019-12-14T15:09:12+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.over-30-engineer.xyz/tags/rails/</loc>
-    <lastmod>2019-12-14T15:09:12+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.over-30-engineer.xyz/tags/</loc>
     <lastmod>2019-12-14T15:09:12+09:00</lastmod>
   </url>
   

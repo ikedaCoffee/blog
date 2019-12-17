@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 14 Dec 2019 15:09:12 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 15:06:05 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.over-30-engineer.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>jQuery入門</title>
+      <link>https://blog.over-30-engineer.xyz/posts/jquery/</link>
+      <pubDate>Tue, 17 Dec 2019 15:06:05 +0900</pubDate>
+      
+      <guid>https://blog.over-30-engineer.xyz/posts/jquery/</guid>
+      <description>Progateなどを参考に自分のメモ用に記述しました。かなり基礎的な内容です。 高速化のためにできること 同じjQueryオブジェクトを複数回使</description>
+    </item>
     
     <item>
       <title>Windows10でRailsのシステムテストの環境構築</title>
