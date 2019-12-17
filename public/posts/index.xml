@@ -15,8 +15,8 @@
 			<pubDate>Tue, 17 Dec 2019 15:06:05 +0900</pubDate>
 			
 			<guid>https://blog.over-30-engineer.xyz/posts/jquery/</guid>
-			<description>Progateなどを参考に自分のメモ用に記述しました。かなり基礎的な内容です。 高速化のためにできること 同じjQueryオブジェクトを複数回使</description>
-			<content type="html"><![CDATA[<p><a href="https://prog-8.com/languages/jquery">Progate</a>などを参考に自分のメモ用に記述しました。かなり基礎的な内容です。</p>
+			<description>ProgateでjQueryを勉強したときの自分用のメモです。かなり基礎的な内容です。 高速化のためにできること 同じjQueryオブジェクトを</description>
+			<content type="html"><![CDATA[<p><a href="https://prog-8.com/languages/jquery">Progate</a>でjQueryを勉強したときの自分用のメモです。かなり基礎的な内容です。</p>
 <h2 id="heading">高速化のためにできること</h2>
 <ul>
 <li>

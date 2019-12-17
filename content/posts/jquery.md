@@ -9,7 +9,7 @@ tags:
   - jQuery
 ---
 
-[Progate](https://prog-8.com/languages/jquery)などを参考に自分のメモ用に記述しました。かなり基礎的な内容です。
+[Progate](https://prog-8.com/languages/jquery)でjQueryを勉強したときの自分用のメモです。かなり基礎的な内容です。
 
 ## 高速化のためにできること
 
