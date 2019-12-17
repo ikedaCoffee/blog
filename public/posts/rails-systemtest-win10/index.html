@@ -9,22 +9,17 @@
 	<meta name="msapplication-TileColor" content="#494f5c">
 <meta itemprop="name" content="Windows10でRailsのシステムテストの環境構築">
 <meta itemprop="description" content="最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、テストフレームワークはデフォルトのMinitestを使用">
-
-
 <meta itemprop="datePublished" content="2019-12-14T15:09:12&#43;09:00" />
 <meta itemprop="dateModified" content="2019-12-14T15:09:12&#43;09:00" />
 <meta itemprop="wordCount" content="2618">
-
-  <meta itemprop="image" content="https://picsum.photos/1024/768/?random">
-
+<meta itemprop="image" content="https://picsum.photos/1024/768/?random">
 
 
-<meta itemprop="keywords" content="Rails,Minitest,Docker,CircleCI,WSL," />
-<meta property="og:title" content="Windows10でRailsのシステムテストの環境構築" />
+
+<meta itemprop="keywords" content="Rails,Minitest,Docker,CircleCI,WSL," /><meta property="og:title" content="Windows10でRailsのシステムテストの環境構築" />
 <meta property="og:description" content="最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、テストフレームワークはデフォルトのMinitestを使用" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.over-30-engineer.xyz/posts/rails-systemtest-win10/" />
-
 <meta property="og:image" content="https://picsum.photos/1024/768/?random" />
 <meta property="article:published_time" content="2019-12-14T15:09:12+09:00" />
 <meta property="article:modified_time" content="2019-12-14T15:09:12+09:00" />
@@ -82,143 +77,129 @@
 				<h1>Windows10でRailsのシステムテストの環境構築</h1>
 			</header>
 			<div class="content">
-				
-
-<p>最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、テストフレームワークはデフォルトのMinitestを使用している。前の職場ではテストコードを書く文化がなく、テストコードを記述させてもらえてありがたく思っている。</p>
-
+				<p>最近職場で、社内用Webアプリのテストコードを書いている。Railsで作られていて、テストフレームワークはデフォルトのMinitestを使用している。前の職場ではテストコードを書く文化がなく、テストコードを記述させてもらえてありがたく思っている。</p>
 <p>今はシステムテストを書いていて、Seleniumを使った自動UIテストをしている。ブラウザをテストコードで自在に操るのはなかなかに楽しい。</p>
-
 <p>Windows10 Proで開発をしていて、WSL上にRails環境を構築して作業をしていた。特に困ることはなかったのだけれど、システムテストだけはWSL環境が原因で躓いた。</p>
-
 <p>当たり前だけど、システムテストにはブラウザが必要だ。でも、WSL内にはブラウザが入っていない。WSL内にchromeをインストールしようと試みたけど、動作が安定せずに断念した。システムテストの環境構築がWSLだとできない&hellip;。さて、どうしたものか。なかなかに悪戦苦闘したので、その解決策を記録しておく。</p>
-
 <p>解決策は2つ記述した。解決策1は、WSL環境のまま、Windowsにインストールされているchromeを使用する方法だ。解決策2はWSLを使用せず、Docker for Windowsで開発環境を構築する方法である。</p>
-
-<h2 id="windowsにインストールされているブラウザを使用する">Windowsにインストールされているブラウザを使用する<a href="#windowsにインストールされているブラウザを使用する" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-
+<h2 id="windows">Windowsにインストールされているブラウザを使用する<a href="#windows" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>WSLを使用し続けるのであれば、Windowsにインストールされているブラウザを使用するのがよいと思う。自分がやった作業は以下の通り。使用するブラウザはChromeなので、他のブラウザを使用する場合は知らない。けど、まあ、似たような設定でいけると思う。</p>
-
 <p>環境: WSL (Ubuntu 18.04) / Rails: 5.2系 / Ruby: 2.5系</p>
-
 <ol>
-<li><p>Chromeを開いてバージョンを調べる。</p>
-
+<li>
+<p>Chromeを開いてバージョンを調べる。</p>
 <ol>
 <li>右上の点が3つ縦に並んでいるボタンをクリック。</li>
 <li>ヘルプをクリック</li>
 <li>Google Chromeについてをクリック</li>
 <li><code>バージョン: 78.0.3904.87</code> などと書いてあるので、このバージョン (78) を覚えておく。</li>
-</ol></li>
-
-<li><p>バージョンにあったChromeDriverをインストールする。</p>
-
-<p><a href="https://chromedriver.chromium.org/downloads">こちら</a>からインストールできる。最初の二桁、つまり<code>バージョン: 78.0.3904.87</code> なら、78のもので新しいものを選べばよい。</p></li>
-
-<li><p>インストールしたchromedriver.exeを適当な場所に置く。</p>
-
-<p>例えば、<code>C:\Program Files\chromedriver_win32\chromedriver.exe</code></p></li>
-
-<li><p><code>/test/application_system_test_case.rb</code> でchromedriverの場所を指定する。</p>
-
+</ol>
+</li>
+<li>
+<p>バージョンにあったChromeDriverをインストールする。</p>
+<p><a href="https://chromedriver.chromium.org/downloads">こちら</a>からインストールできる。最初の二桁、つまり<code>バージョン: 78.0.3904.87</code> なら、78のもので新しいものを選べばよい。</p>
+</li>
+<li>
+<p>インストールしたchromedriver.exeを適当な場所に置く。</p>
+<p>例えば、<code>C:\Program Files\chromedriver_win32\chromedriver.exe</code></p>
+</li>
+<li>
+<p><code>/test/application_system_test_case.rb</code> でchromedriverの場所を指定する。</p>
 <p>3の場所に置いたなら、↓のように記述すればよい。</p>
 <div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;test_helper&#39;</span>
 <span class="c1"># 下記を追加</span>
 <span class="no">Selenium</span><span class="o">::</span><span class="no">WebDriver</span><span class="o">::</span><span class="no">Chrome</span><span class="o">::</span><span class="no">Service</span><span class="o">.</span><span class="n">driver_path</span> <span class="o">=</span> <span class="s1">&#39;/mnt/c/Program Files/chromedriver_win32/chromedriver.exe&#39;</span>
 
 <span class="k">class</span> <span class="nc">ApplicationSystemTestCase</span> <span class="o">&lt;</span> <span class="no">ActionDispatch</span><span class="o">::</span><span class="no">SystemTestCase</span>
-  <span class="n">driven_by</span> <span class="ss">:selenium</span><span class="p">,</span> <span class="ss">using</span><span class="p">:</span> <span class="ss">:chrome</span><span class="p">,</span> <span class="ss">screen_size</span><span class="p">:</span> <span class="o">[</span><span class="mi">1400</span><span class="p">,</span> <span class="mi">1400</span><span class="o">]</span>
-<span class="k">end</span></code></pre></div></li>
-
-<li><p>Capybaraのバージョンを3.17以上にする。</p>
-
+  <span class="n">driven_by</span> <span class="ss">:selenium</span><span class="p">,</span> <span class="ss">using</span><span class="p">:</span> <span class="ss">:chrome</span><span class="p">,</span> <span class="ss">screen_size</span><span class="p">:</span> <span class="o">[</span><span class="mi">1400</span><span class="o"></span><span class="p">,</span> <span class="mi">1400</span><span class="o"></span><span class="o">]</span>
+<span class="k">end</span>
+</code></pre></div></li>
+<li>
+<p>Capybaraのバージョンを3.17以上にする。</p>
 <p>Gemfileを開いて、<code>gem 'capybara', '~&gt; 2.13'</code>などと記述されている箇所を<code>gem 'capybara', '~&gt; 3.17'</code>に変更する。</p>
 <div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1"># ↓を</span>
 <span class="n">gem</span> <span class="s1">&#39;capybara&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.13&#39;</span>
 <span class="c1"># ↓に変更</span>
-<span class="n">gem</span> <span class="s1">&#39;capybara&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.17&#39;</span></code></pre></div>
-<p>変更したら、忘れずに<code>bundle install</code>をすること。</p></li>
+<span class="n">gem</span> <span class="s1">&#39;capybara&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.17&#39;</span>
+</code></pre></div><p>変更したら、忘れずに<code>bundle install</code>をすること。</p>
+</li>
 </ol>
-
 <p>以上である。これで、システムテストを記述して、<code>rails test:system</code>と実行すれば、chromeが立ち上がって、自動でUIテストがはじまる。Seleniumを使ったことがなかった自分のような人にとっては、なかなかに面白いものがみれると思う。</p>
-
-<h2 id="docker-for-windowsで開発環境を構築する">Docker for Windowsで開発環境を構築する<a href="#docker-for-windowsで開発環境を構築する" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-
+<h2 id="docker-for-windows">Docker for Windowsで開発環境を構築する<a href="#docker-for-windows" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>ローカルの環境だけでテストをするのであれば、Windows環境のブラウザを使ってテストをすれば良い。だが、CircleCIなどで自動でシステムテストを行ってチェックをしたいという場合、どうすればよいのだろうか？Docker使えばいけるよとアドバイスをもらったので、そうすることにした。Dockerのイメージで、ブラウザが入ったものを使用できるとのこと。</p>
-
 <ol>
-<li><p>Docker for Windowsをインストールする</p>
-
+<li>
+<p>Docker for Windowsをインストールする</p>
 <p>Docker for Windowsのインストールは<a href="https://docs.docker.com/docker-for-windows/install/">公式サイト(英語)</a>を参考にすればいけると思う。簡略化すると、以下の通り。</p>
-
 <ol>
 <li>Windows10 Proの設定で、Hiper-Vを有効化する。</li>
 <li><a href="https://hub.docker.com/?overlay=onboarding">こちら</a>からDocker Desktop for WIndowsをインストール。</li>
 </ol>
-
-<p>英語だけど、読み進めながら進めるのが無難かと思う。</p></li>
-
-<li><p>Docker Hubから<code>CircleCI/ruby</code>イメージを探し出す</p>
-
+<p>英語だけど、読み進めながら進めるのが無難かと思う。</p>
+</li>
+<li>
+<p>Docker Hubから<code>CircleCI/ruby</code>イメージを探し出す</p>
 <ol>
 <li><a href="https://hub.docker.com/">Docker Hub</a>にアクセスする。</li>
 <li><code>circleci/ruby</code>と検索する。もしくは、直接<a href="https://hub.docker.com/r/circleci/ruby">こちら</a>にアクセスする。</li>
 <li><code>Tags</code>を選択</li>
 <li>Tagsの検索部分で、<code>2.5.7-node-browsers</code>と検索する。<code>2.5.7</code>は自分が使用しているRubyのバージョン。<code>node</code>はNode .jsを含める場合。Rails使う場合はこれを含めておいた方が無難そう。そして大事なのが<code>browsers</code>の部分。これだけでChromeやFirefoxのブラウザ環境が入った環境を構築できる。</li>
 <li>今回、自分の使用するイメージは<code>circleci/ruby:2.5.7-node-browsers</code>ということになる。</li>
-</ol></li>
-
-<li><p>Dockerfileおよびdocker-compose.ymlの作成</p>
-
+</ol>
+</li>
+<li>
+<p>Dockerfileおよびdocker-compose.ymlの作成</p>
 <p>自分の場合、すでに作成済のrailsアプリを動かすために、railsアプリ配下に下記のような構成でDockerfileとdocker-compose.ymlを作成した。どちらもrailsのルートディレクトリ直下に置いた。</p>
-
 <ul>
-<li><p>Dockerfile</p>
+<li>Dockerfile</li>
+</ul>
 <div class="highlight"><pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">FROM</span><span class="s"> circleci/ruby:2.5.7-node-browsers</span><span class="err">
 </span><span class="err"></span><span class="k">RUN</span> apt-get update -qq <span class="o">&amp;&amp;</span> apt-get install -y build-essential libpq-dev<span class="err">
 </span><span class="err"></span><span class="k">RUN</span> mkdir /railsアプリ名<span class="err">
 </span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /railsアプリ名</span><span class="err">
-</span><span class="err"></span>COPY . /railsアプリ名/<span class="err">
+</span><span class="err"></span><span class="k">COPY</span> . /railsアプリ名/<span class="err">
 </span><span class="err"></span><span class="k">RUN</span> gem install bundler<span class="err">
-</span><span class="err"></span><span class="k">RUN</span> bundle install</code></pre></div></li>
-
-<li><p>Docker-compose.yml</p>
+</span><span class="err"></span><span class="k">RUN</span> bundle install<span class="err">
+</span></code></pre></div><ul>
+<li>Docker-compose.yml</li>
+</ul>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">version<span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
 </span><span class="w"></span>services<span class="p">:</span><span class="w">
-</span><span class="w"></span>db<span class="p">:</span><span class="w">
-</span><span class="w"></span>image<span class="p">:</span><span class="w"> </span>postgres<span class="p">:</span><span class="m">12.1</span><span class="w">
+</span><span class="w">  </span>db<span class="p">:</span><span class="w">
+</span><span class="w">    </span>image<span class="p">:</span><span class="w"> </span>postgres<span class="p">:</span><span class="m">12.1</span><span class="w">
+</span><span class="w">    </span>volumes<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>postgres_data<span class="p">:</span>/var/lib/postgresql/data<span class="w">
+</span><span class="w">  </span>web<span class="p">:</span><span class="w">
+</span><span class="w">    </span>build<span class="p">:</span><span class="w"> </span>.<span class="w">
+</span><span class="w">    </span>volumes<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>.<span class="p">:</span>/railsアプリ名<span class="w">
+</span><span class="w">    </span>ports<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span><span class="s2">&#34;3000:3000&#34;</span><span class="w">
+</span><span class="w">    </span>depends_on<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>db<span class="w">
 </span><span class="w"></span>volumes<span class="p">:</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>postgres_data<span class="p">:</span>/var/lib/postgresql/data<span class="w">
-</span><span class="w"></span>web<span class="p">:</span><span class="w">
-</span><span class="w"></span>build<span class="p">:</span><span class="w"> </span>.<span class="w">
-</span><span class="w"></span>volumes<span class="p">:</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>.<span class="p">:</span>/railsアプリ名<span class="w">
-</span><span class="w"></span>ports<span class="p">:</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span><span class="s2">&#34;3000:3000&#34;</span><span class="w">
-</span><span class="w"></span>depends_on<span class="p">:</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>db<span class="w">
-</span><span class="w"></span>volumes<span class="p">:</span><span class="w">
-</span><span class="w"></span>postgres_data<span class="p">:</span><span class="w"> </span>{}</code></pre></div></li>
-</ul></li>
-
-<li><p>railsのルートディレクトリ直下で下記を実行</p>
+</span><span class="w">  </span>postgres_data<span class="p">:</span><span class="w"> </span>{}<span class="w">
+</span></code></pre></div></li>
+<li>
+<p>railsのルートディレクトリ直下で下記を実行</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">&gt; docker-compose build
 &gt; docker-compose up -d
-&gt; docker-compose <span class="nb">exec</span> app rails db:create db:migrate</code></pre></div></li>
-
-<li><p>対象のコンテナにアタッチしてシステムテストを試してみる</p>
-
+&gt; docker-compose <span class="nb">exec</span> app rails db:create db:migrate
+</code></pre></div></li>
+<li>
+<p>対象のコンテナにアタッチしてシステムテストを試してみる</p>
 <p><code>docker ps</code>コマンドで、起動中のコンテナを確認すると、下記のような状態になっているはず。</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">&gt; docker ps
 ... NAMES
 ... railsアプリ名_web_1
-... railsアプリ名_db_1</code></pre></div>
-<p>下記を実行してコンテン内に入る。</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">&gt; docker <span class="nb">exec</span> -it railsアプリ名_web_1 /bin/sh</code></pre></div>
-<p>Railsアプリのルーディレクトリに移動して、システムテストを試す。</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ rails test:system</code></pre></div>
-<p>テストが実行されればOK。</p></li>
+... railsアプリ名_db_1
+</code></pre></div><p>下記を実行してコンテン内に入る。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">&gt; docker <span class="nb">exec</span> -it railsアプリ名_web_1 /bin/sh
+</code></pre></div><p>Railsアプリのルーディレクトリに移動して、システムテストを試す。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ rails test:system
+</code></pre></div><p>テストが実行されればOK。</p>
+</li>
 </ol>
-
 <p>Docker環境の場合、実際にブラウザが動いているところを確認できないのが辛い。システムテストを実際に書くときは、WSL環境でWindowsのChromeを呼び出す方がよいと思う。</p>
 
 			</div>
