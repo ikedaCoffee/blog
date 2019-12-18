@@ -135,7 +135,7 @@
 <p><code>index</code>メソッドを用いると、↓のコードのように「li」要素の中の「.active」要素のインデックス番号（1）を取得できる。</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span><span class="p"></span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p"></span><span class="p">&gt;</span>リスト0<span class="p">&lt;</span><span class="p">/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">li</span><span class="p"></span><span class="p">&gt;</span>リスト1<span class="p">&lt;</span><span class="p">/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span><span class="p"></span><span class="p">&gt;</span>リスト1<span class="p">&lt;</span><span class="p">/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p"></span><span class="p">&gt;</span>リスト2<span class="p">&lt;</span><span class="p">/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">ul</span><span class="p">&gt;</span>
 
@@ -179,9 +179,9 @@
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">)</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span><span class="p">{</span>
   <span class="s1">&#39;font-size&#39;</span><span class="o">:</span> <span class="s1">&#39;50px&#39;</span>
 <span class="p">}</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span><span class="p">;</span>
-</code></pre></div><p><code>animate</code>メソッドでは、CSSの値だけでなく、<code>scrollTop</code>などの値も変更できる。
-<code>$('html, body').animate({'scrollTop': 0}, 時間);</code> のように指定する。</p>
-</li>
+</code></pre></div><p><code>animate</code>メソッドでは、CSSの値だけでなく、<code>scrollTop</code>などの値も変更できる。</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;html, body&#39;</span><span class="p">)</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span><span class="p">{</span><span class="s1">&#39;scrollTop&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">}</span><span class="p">,</span> <span class="nx">時間</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div></li>
 <li>
 <p><code>scrollTop</code>メソッドは、<code>$('html, body').scrollTop(値);</code> のように指定し、ページ最上部から<code>値px</code>の位置に移動することができる。<code>scrollTop</code>は通常<code>$('html, body')</code>に対して用いるので、セットで覚えておくとよい。</p>
 </li>
