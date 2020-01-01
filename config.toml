@@ -1,7 +1,7 @@
 baseURL = "https://blog.over-30-engineer.xyz/"
 languageCode = "ja-JP"
 defaultContentLanguage = "ja"
-title = "30s_engineer"
+title = "ikeda blog"
 theme = "hermit"
 # enableGitInfo = true
 pygmentsCodefences  = true
@@ -14,7 +14,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 # disqusShortname = "yourdiscussshortname"
 
 [author]
-  name = "ikeda"
+  name = "ikeda blog"
 
 [blackfriday]
   # hrefTargetBlank = true
@@ -36,8 +36,8 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # images = [""]
   themeColor = "#494f5c"
 
-  homeSubtitle = "30代エンジニアの技術ブログ"
-  footerCopyright = ' 30s_engineer'
+  homeSubtitle = "30代エンジニアのブログ"
+  # footerCopyright = ' 30s_engineer'
   # bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.

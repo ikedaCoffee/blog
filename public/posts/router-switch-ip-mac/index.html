@@ -9,17 +9,22 @@
 	<meta name="msapplication-TileColor" content="#494f5c">
 <meta itemprop="name" content="ルーターとスイッチとIPアドレスとMACアドレスについて">
 <meta itemprop="description" content="ネットワークの知識がなさすぎて友達に相談したところ、色々なことを教えてくれた。友達には、まじで感謝している。教わったことを自分なりにまとめて">
+
+
 <meta itemprop="datePublished" content="2019-09-27T01:18:52&#43;09:00" />
 <meta itemprop="dateModified" content="2019-09-27T01:18:52&#43;09:00" />
 <meta itemprop="wordCount" content="1199">
-<meta itemprop="image" content="https://picsum.photos/1024/768/?random">
+
+  <meta itemprop="image" content="https://picsum.photos/1024/768/?random">
 
 
 
-<meta itemprop="keywords" content="network," /><meta property="og:title" content="ルーターとスイッチとIPアドレスとMACアドレスについて" />
+<meta itemprop="keywords" content="network," />
+<meta property="og:title" content="ルーターとスイッチとIPアドレスとMACアドレスについて" />
 <meta property="og:description" content="ネットワークの知識がなさすぎて友達に相談したところ、色々なことを教えてくれた。友達には、まじで感謝している。教わったことを自分なりにまとめて" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.over-30-engineer.xyz/posts/router-switch-ip-mac/" />
+
 <meta property="og:image" content="https://picsum.photos/1024/768/?random" />
 <meta property="article:published_time" content="2019-09-27T01:18:52+09:00" />
 <meta property="article:modified_time" content="2019-09-27T01:18:52+09:00" />
@@ -47,7 +52,7 @@
 		<div class="hdr-wrapper section-inner">
 			<div class="hdr-left">
 				<div class="site-branding">
-					<a href="https://blog.over-30-engineer.xyz/">30s_engineer</a>
+					<a href="https://blog.over-30-engineer.xyz/">ikeda blog</a>
 				</div>
 				<nav class="site-nav hide-in-mobile">
 					
@@ -77,39 +82,52 @@
 				<h1>ルーターとスイッチとIPアドレスとMACアドレスについて</h1>
 			</header>
 			<div class="content">
-				<p>ネットワークの知識がなさすぎて<a href="http://interier.hatenablog.com/">友達</a>に相談したところ、色々なことを教えてくれた。友達には、まじで感謝している。教わったことを自分なりにまとめてみた。メモのような感じなので、他の人が読んだところで理解はできないかもしれない。自分が記述したので間違いも多いかもしれない</p>
-<h2 id="osi-">OSI参照モデル (通信の層)<a href="#osi-" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+				
+
+<p>ネットワークの知識がなさすぎて<a href="http://interier.hatenablog.com/">友達</a>に相談したところ、色々なことを教えてくれた。友達には、まじで感謝している。教わったことを自分なりにまとめてみた。メモのような感じなので、他の人が読んだところで理解はできないかもしれない。自分が記述したので間違いも多いかもしれない</p>
+
+<h2 id="osi参照モデル-通信の層">OSI参照モデル (通信の層)<a href="#osi参照モデル-通信の層" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
 <table>
 <thead>
 <tr>
 <th>OSI参照モデル</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
-<td>7.  <a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%B1%A4">アプリケーション層</a><!-- raw HTML omitted --></td>
+<td>7.  <a href="https://ja.wikipedia.org/wiki/アプリケーション層">アプリケーション層</a><br /></td>
 </tr>
+
 <tr>
-<td>6.  <a href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%B1%A4">プレゼンテーション層</a><!-- raw HTML omitted --></td>
+<td>6.  <a href="https://ja.wikipedia.org/wiki/プレゼンテーション層">プレゼンテーション層</a><br /></td>
 </tr>
+
 <tr>
-<td>5.  <a href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E5%B1%A4">セッション層</a><!-- raw HTML omitted --></td>
+<td>5.  <a href="https://ja.wikipedia.org/wiki/セッション層">セッション層</a><br /></td>
 </tr>
+
 <tr>
-<td>4.  <a href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E5%B1%A4">トランスポート層</a><!-- raw HTML omitted -->セグメント(パケットのようなもの)</td>
+<td>4.  <a href="https://ja.wikipedia.org/wiki/トランスポート層">トランスポート層</a><br />セグメント(パケットのようなもの)</td>
 </tr>
+
 <tr>
-<td>3.  <a href="https://ja.wikipedia.org/wiki/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E5%B1%A4">ネットワーク層</a><!-- raw HTML omitted -->パケット<!-- raw HTML omitted -->IPアドレス<!-- raw HTML omitted -->ルーター(IPアドレスが理解できる)</td>
+<td>3.  <a href="https://ja.wikipedia.org/wiki/ネットワーク層">ネットワーク層</a><br />パケット<br />IPアドレス<br />ルーター(IPアドレスが理解できる)</td>
 </tr>
+
 <tr>
-<td>2.  <a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%AF%E5%B1%A4">データリンク層</a><!-- raw HTML omitted -->フレーム(パケットのようなもの)<!-- raw HTML omitted -->ブロードキャスト(同じネットワーク範囲内で行われる)<!-- raw HTML omitted -->スイッチ(MACアドレスしか理解できない)<!-- raw HTML omitted -->MACアドレス(NIC)<!-- raw HTML omitted -->ARPテーブル = 送信先IPアドレスと送信先MACアドレス両方の情報</td>
+<td>2.  <a href="https://ja.wikipedia.org/wiki/データリンク層">データリンク層</a><br />フレーム(パケットのようなもの)<br />ブロードキャスト(同じネットワーク範囲内で行われる)<br />スイッチ(MACアドレスしか理解できない)<br />MACアドレス(NIC)<br />ARPテーブル = 送信先IPアドレスと送信先MACアドレス両方の情報</td>
 </tr>
+
 <tr>
-<td>1.  <a href="https://ja.wikipedia.org/wiki/%E7%89%A9%E7%90%86%E5%B1%A4">物理層</a><!-- raw HTML omitted -->ケーブル<!-- raw HTML omitted -->ハブ</td>
+<td>1.  <a href="https://ja.wikipedia.org/wiki/物理層">物理層</a><br />ケーブル<br />ハブ</td>
 </tr>
 </tbody>
 </table>
-<h2 id="heading">スイッチについて<a href="#heading" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<h2 id="スイッチについて">スイッチについて<a href="#スイッチについて" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
 <ol>
 <li>ハブに6台くらいのPC繋いでるとする。リクエストはハブを経由して6台に全部送られる(ブローキャスト)</li>
 <li>複数のPCがリクエストを送るとリクエスト同士がコリジョンを起こす(コリジョン・ドメイン)</li>
@@ -120,7 +138,9 @@
 <li>スイッチの場合、ネットワーク部が違うと通信できない</li>
 <li>スイッチングはどのようにスイッチするか</li>
 </ol>
-<h2 id="heading-1">ルーターについて<a href="#heading-1" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<h2 id="ルーターについて">ルーターについて<a href="#ルーターについて" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
 <ol>
 <li>スイッチを外して、ルーターのみで通信するとする(例えば6台)</li>
 <li>ネットワーク部が違くても通信できる</li>
@@ -129,24 +149,35 @@
 <li>違うネットワーク同士をつなぐのがルーター</li>
 <li>コリジョン・ドメインを分けることもできる</li>
 </ol>
-<h2 id="ping">ルーターが原因でpingが飛ばない場合<a href="#ping" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<h2 id="ルーターが原因でpingが飛ばない場合">ルーターが原因でpingが飛ばない場合<a href="#ルーターが原因でpingが飛ばない場合" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
 <ol>
 <li>TTLは生存時間(経由したルーターの数のようなもの)</li>
 <li>途中でルーターが不具合を起こした場合にPingが帰ってこない</li>
 <li>経由しているルーターの道筋をトレースルート(Windowsだとトレーサートというらしい)</li>
 <li>ルーティングはルーターがどのルートを通っていくか</li>
 </ol>
-<h2 id="l2l3">L2スイッチとL3スイッチ<a href="#l2l3" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<h2 id="l2スイッチとl3スイッチ">L2スイッチとL3スイッチ<a href="#l2スイッチとl3スイッチ" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
 <ol>
 <li>L2スイッチはレイヤー2で動く機器(MACアドレスのみを理解する)</li>
 <li>L3スイッチはレイヤー3で動く機器(MACアドレスもIPアドレスも理解する)</li>
 </ol>
+
 <h2 id="vlan">VLAN<a href="#vlan" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
 <p>VLANを使えば、ブロードキャストドメインを分けることができる</p>
-<h2 id="dhcpdynamic-host-configuration-protocol">DHCP(Dynamic Host Configuration Protocol)<a href="#dhcpdynamic-host-configuration-protocol" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<h2 id="dhcp-dynamic-host-configuration-protocol">DHCP(Dynamic Host Configuration Protocol)<a href="#dhcp-dynamic-host-configuration-protocol" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
 <p>IPアドレスを自動で割り振る。設定をONとOFFにすることができる</p>
-<h2 id="heading-2">ネットワークを勉強するに当たって参照すべきサイト<a href="#heading-2" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<h2 id="ネットワークを勉強するに当たって参照すべきサイト">ネットワークを勉強するに当たって参照すべきサイト<a href="#ネットワークを勉強するに当たって参照すべきサイト" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
 <p><a href="http://www5e.biglobe.ne.jp/aji/3min/">http://www5e.biglobe.ne.jp/aji/3min/</a></p>
+
 <p>特に24回目は参考になると紹介されたが、0回〜81回まで全部読んどけと友達に紹介してもらった</p>
 
 			</div>
@@ -173,7 +204,7 @@
 	</main>
 
 	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
-		<p>&copy; 2019 <a href="https://blog.over-30-engineer.xyz/">ikeda</a> 30s_engineer <a href="https://blog.over-30-engineer.xyz/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></p>
+		<p>&copy; 2020 <a href="https://blog.over-30-engineer.xyz/">ikeda blog</a> <a href="https://blog.over-30-engineer.xyz/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></p>
 	</footer>
 
 
