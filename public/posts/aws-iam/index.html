@@ -9,22 +9,17 @@
 	<meta name="msapplication-TileColor" content="#494f5c">
 <meta itemprop="name" content="AWSのIAMについて">
 <meta itemprop="description" content="現在、AWSの資格を取ろうと思い、目下勉強中だ。今回はとりあえず、IAMについてまとめる。下記のUdemyのコースを受講しているのでこちらの">
-
-
 <meta itemprop="datePublished" content="2019-08-22T05:07:48&#43;09:00" />
 <meta itemprop="dateModified" content="2019-08-22T05:07:48&#43;09:00" />
-<meta itemprop="wordCount" content="789">
-
-  <meta itemprop="image" content="https://picsum.photos/1024/768/?random">
-
+<meta itemprop="wordCount" content="792">
+<meta itemprop="image" content="https://picsum.photos/1024/768/?random">
 
 
-<meta itemprop="keywords" content="aws," />
-<meta property="og:title" content="AWSのIAMについて" />
+
+<meta itemprop="keywords" content="aws," /><meta property="og:title" content="AWSのIAMについて" />
 <meta property="og:description" content="現在、AWSの資格を取ろうと思い、目下勉強中だ。今回はとりあえず、IAMについてまとめる。下記のUdemyのコースを受講しているのでこちらの" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikedablog.com/posts/aws-iam/" />
-
 <meta property="og:image" content="https://picsum.photos/1024/768/?random" />
 <meta property="article:published_time" content="2019-08-22T05:07:48+09:00" />
 <meta property="article:modified_time" content="2019-08-22T05:07:48+09:00" />
@@ -42,7 +37,7 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 
 	<title>AWSのIAMについて</title>
-	<link rel="stylesheet" href="https://ikedablog.com/css/style.min.df961f69d5dab7b7b6eb4af35c991c552306e8a9ff4bed0e66e63fdca2ded19a.css" integrity="sha256-35YfadXat7e260rzXJkcVSMG6Kn/S+0OZuY/3KLe0Zo=" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://ikedablog.com/css/style.min.cdca58cbe03865f96d824cd15aee93ed8b7274d14cdc54bc0121cdabbbe794cf.css" integrity="sha256-zcpYy+A4ZfltgkzRWu6T7YtydNFM3FS8ASHNq7vnlM8=" crossorigin="anonymous">
 	<style>.bg-img {background-image: url('https://picsum.photos/1024/768/?random');}</style>
 </head>
 
@@ -83,39 +78,29 @@
 			</header>
 			<div class="content">
 				<p>現在、AWSの資格を取ろうと思い、目下勉強中だ。今回はとりあえず、IAMについてまとめる。下記のUdemyのコースを受講しているのでこちらの講義から引用などをさせていただく。</p>
-
-<p><a href="https://www.udemy.com/aws-and-infra/">AWS：ゼロから実践するAmazon Web Services。手を動かしながらインフラの基礎を習得</a></p>
-
+<p>[AWS：ゼロから実践するAmazon Web Services。手を動かしながらインフラの基礎を習得]
+(<a href="https://www.udemy.com/aws-and-infra/">https://www.udemy.com/aws-and-infra/</a>)</p>
 <p>AWSのサービスにIAMというのがある。</p>
-
 <p>IAMはAWS Identity and Access Managementの略。アイアムと読む人が多い。</p>
-
 <p><a href="https://aws.amazon.com/jp/iam/">https://aws.amazon.com/jp/iam/</a></p>
-
 <blockquote>
 <p>AWS のサービスやリソースへのアクセスを安全に管理できます。IAM を使用すると、AWS のユーザーとグループを作成および管理し、アクセス権を使用して AWS リソースへのアクセスを許可および拒否できます。</p>
 </blockquote>
-
 <p>覚えるべき用語があって、下記の4つ。</p>
-
 <ol>
 <li><code>ポリシー</code></li>
 <li><code>ユーザー</code></li>
 <li><code>グループ</code></li>
 <li><code>ロール</code></li>
 </ol>
-
 <p>それぞれ解説する↓。</p>
-
 <ol>
 <li><code>ポリシー</code>は、アクセス許可の定義。「どのAWSサービスの」「どのリソースに対して」「どんな操作を」「許可するor許可しない」を定義する。</li>
 <li><code>ユーザー</code>は、個々のアカウントのユーザー。</li>
 <li><code>グループ</code>は、IAMユーザーの集合。複数のユーザーにアクセス許可を付与する作業を簡素化する。</li>
 <li><code>ロール</code>は、一時的にアクセスを許可したアカウントを発行できる。EC2やLambdaなどのAWSリソースに権限を付与するために使用。</li>
 </ol>
-
 <p><code>ユーザー</code>や<code>グループ</code>はLinuxのそれと似ているのでわかりやすい。<code>ポリシー</code>もそれらを使用してユーザーへの権限管理を行うものなのだと理解できる。</p>
-
 <p><code>ロール</code>だけ少しわかりにくいかもしれない。ユーザーやポリシーを使用してアクセス許可などをすると永続的にアクセスを許可することになったりする。どうしてもセキュアとは言い切れない状態となってしまう。<code>ロール</code>という機能があることにより、一時的にのみ権限を付与することが可能になるため、永続的に権限を許可することに比べて、よりセキュアな状態であると言える。そういった状態を作るために<code>ロール</code>はあるみたいだ。</p>
 
 			</div>
@@ -125,7 +110,7 @@
 				<p>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://ikedablog.com/tags/aws">aws</a></span>
 				</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>789 文字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>792 文字</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-08-22 05:07</p>
 			</footer>
 		</article>
