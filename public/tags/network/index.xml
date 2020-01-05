@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>network on ikeda blog</title>
-    <link>https://blog.over-30-engineer.xyz/tags/network/</link>
+    <link>https://ikedablog.com/tags/network/</link>
     <description>Recent content in network on ikeda blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Fri, 27 Sep 2019 01:18:52 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.over-30-engineer.xyz/tags/network/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ikedablog.com/tags/network/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ルーターとスイッチとIPアドレスとMACアドレスについて</title>
-      <link>https://blog.over-30-engineer.xyz/posts/router-switch-ip-mac/</link>
+      <link>https://ikedablog.com/posts/router-switch-ip-mac/</link>
       <pubDate>Fri, 27 Sep 2019 01:18:52 +0900</pubDate>
       
-      <guid>https://blog.over-30-engineer.xyz/posts/router-switch-ip-mac/</guid>
+      <guid>https://ikedablog.com/posts/router-switch-ip-mac/</guid>
       <description>ネットワークの知識がなさすぎて友達に相談したところ、色々なことを教えてくれた。友達には、まじで感謝している。教わったことを自分なりにまとめて</description>
     </item>
     
